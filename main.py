@@ -1,12 +1,13 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from transformers import pipeline
 
 
 app = FastAPI()
-@app.get("/{input_str}")
-def read_root():
+@app.post("/predict")
+def read_root(request: Request):
+  resp = request.body()
   classifier = pipeline("sentiment-analysis", "blanchefort/rubert-base-cased-sentiment")
-  result = classifier(input_str)
+  result = classifier(resp)
   return result
   
   
