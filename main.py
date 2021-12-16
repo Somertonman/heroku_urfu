@@ -11,6 +11,9 @@ def read_root(request: Request):
   return result
   
   
-  
+@app.get("/predict")
+  def h():
+    return "get works"
+
 
 
