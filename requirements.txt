@@ -2,3 +2,4 @@ transformers
 fastapi
 gunicorn
 uvicorn
+tensorflow-cpu
