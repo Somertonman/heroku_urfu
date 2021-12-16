@@ -1,7 +1,6 @@
 from fastapi import FastAPI, Request
 from transformers import pipeline
 
-
 app = FastAPI()
 @app.post("/predict")
 def read_root(request: Request):
@@ -12,8 +11,8 @@ def read_root(request: Request):
   
   
 @app.get("/predict")
-  def h():
-    return "get works"
+def h():
+  return "get works"
 
 
 
