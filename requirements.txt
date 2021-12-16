@@ -1,5 +1,7 @@
+-f https://download.pytorch.org/whl/torch_stable.html
+
 transformers
 fastapi
 gunicorn
 uvicorn
-tensorflow-cpu
+torch==1.9.0+cpu
